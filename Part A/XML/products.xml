@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+<category type="Soft_Drinks">
+    <product code="001-01">
+        <name>Fizzy-Pop Classic</name>
+        <description>Original flavour, 500ml bottle</description>
+        <quantity>150</quantity>
+        <unit_price>3.50</unit_price>
+    </product>
+    <product code="001-02">
+        <name>Fizzy-Pop Cherry</name>
+        <description>Cherry flavour, 350ml can</description>
+        <quantity>125</quantity>
+        <unit_price>2.25</unit_price>
+    </product>
+    <product code="001-03">
+        <name>Fizzy-Pop Vanilla</name>
+        <description>Vanilla flavour, 350ml can</description>
+        <quantity>75</quantity>
+        <unit_price>2.50</unit_price>
+    </product>
+    <product code="001-04">
+        <name>Fizzy-Pop Extreme</name>
+        <description>Doubly Caffinated flavour, 500ml bottle</description>
+        <quantity>200</quantity>
+        <unit_price>4.00</unit_price>
+    </product>
+    <product code="001-05">
+        <name>Fizzy-Pop Spooky Pumpkin</name>
+        <description>Seasonal Spiced-Pumpkin flavour, 500ml bottle</description>
+        <quantity>100</quantity>
+        <unit_price>3.50</unit_price>
+    </product>
+    <product code="011-01">
+        <name>Fizzy-Pop Diet</name>
+        <description>Sugar-Free, 500ml bottle</description>
+        <quantity>115</quantity>
+        <unit_price>3.25</unit_price>
+    </product>
+    <product code="011-02">
+        <name>Fizzy-Pop Junior</name>
+        <description>Caffine-Free, 350ml can</description>
+        <quantity>75</quantity>
+        <unit_price>2.25</unit_price>
+    </product>
+    <product code="011-03">
+        <name>Fizzy-Pop Citrus</name>
+        <description>Citrus flavour, 350ml can</description>
+        <quantity>50</quantity>
+        <unit_price>2.25</unit_price>
+    </product>
+    <product code="011-04">
+        <name>Fizzy-Pop Light</name>
+        <description>Sugar-Free Original Flavour, 500ml bottle</description>
+        <quantity>150</quantity>
+        <unit_price>3.25</unit_price>
+    </product>
+    <product code="011-05">
+        <name>Fizzy-Pop Aqua</name>
+        <description>Flavourless Sparkling Water, 500ml bottle</description>
+        <quantity>100</quantity>
+        <unit_price>3.00</unit_price>
+    </product>
+</category>
+
+<!--
+Category		String 
+Code		Codes must be unique IDs of the form ###-## where # is a digit 
+Name		String 
+Description	String 
+Quantity		Integer greater or equal to 0 
+Unit Price		Decimal greater or equal to 0 
+-->

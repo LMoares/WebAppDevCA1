@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  font-family: "Oswald", serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #1e2022;
+}
+
+body {
+  font-family: "Open Sans", serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-variation-settings: "wdth" 100 !important;
+  color: #1e2022;
+  background-color: #c9d6df;
+  background-image: url("../img/bg-img.png");
+  background-attachment: fixed;
+  background-position: center;
+
+  overflow: auto;
+}
+
+.index_card {
+  width: 18rem;
+  height: 24rem;
+}
+
+.index_btn:hover {
+  transform: scale(1.03);
+}
+
+.index_body {
+  background-color: #c2d3de;
+  border-radius: 5px;
+  border: 5px solid #b9dcff;
+  padding: 5rem;
+}
+
+body {
+  background-image: url("../img/bg-img.png");
+  background-attachment: fixed;
+  background-position: center;
+}
