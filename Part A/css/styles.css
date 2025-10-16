@@ -30,7 +30,7 @@ body {
   height: 24rem;
 }
 
-.index_btn:hover {
+.btn:hover {
   transform: scale(1.03);
 }
 
@@ -38,9 +38,15 @@ body {
   background-color: #c2d3de;
   border-radius: 5px;
   border: 5px solid #b9dcff;
-  padding: 5rem;
+  padding: 2rem;
 }
 
+.products_col,
+.products_search {
+  background-color: #c2d3de;
+  border-radius: 5px;
+  border: 5px solid #b9dcff;
+}
 body {
   background-image: url("../img/bg-img.png");
   background-attachment: fixed;

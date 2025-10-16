@@ -61,6 +61,18 @@
         <quantity>100</quantity>
         <unit_price>3.00</unit_price>
     </product>
+    <product code="101-01">
+        <name>Fizzy-Pop Orange</name>
+        <description>Orange Flavour, 350ml can</description>
+        <quantity>150</quantity>
+        <unit_price>2.25</unit_price>
+    </product>
+    <product code="101-02">
+        <name>Fizzy-Pop Grape</name>
+        <description>Grape Flavour, 350ml can</description>
+        <quantity>115</quantity>
+        <unit_price>2.25</unit_price>
+    </product>
 </category>
 
 <!--
