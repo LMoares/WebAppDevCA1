@@ -1,10 +1,13 @@
+//global variables
 let xml;
 let xsl;
 let data = new Map();
 //data will store products from xml
 //key: product code, value: array of product child elements
 //eg: "001-01", [name, description, quantity, price]
-let compareList = [];
+
+let compareList = []; //array to hold product codes to ensure user only receives unique products in comparison view
+
 //output elements for html page
 let searchMessage = document.getElementById("searchMessage");
 let searchOutput = document.getElementById("searchOutput");
@@ -100,17 +103,17 @@ function buildDataMap() {
 }
 
 function getXMLXSLData() {
-  //relative xml/xsl path
+  //relative xml/xsl file path
   const xmlPath = "XML/products.xml";
   const xslPath = "XML/products.xsl";
 
+  //https://www.w3schools.com/xml/xml_http.asp
+  //documentation for XMLHttpRequest - reading XML & XSL with Javascript
+
   const fetchXML = new XMLHttpRequest();
-  //build request for xml data
-  fetchXML.open("GET", xmlPath, false);
-  //send above request from browser to server - waits for response
-  fetchXML.send();
-  //captures response and saves it to local variable
-  const xmlFile = fetchXML.responseXML;
+  fetchXML.open("GET", xmlPath, false); //build request for xml data
+  fetchXML.send(); //send above request from browser to server - waits for response
+  const xmlFile = fetchXML.responseXML; //captures response and saves it to local variable
 
   //same as above but for xsl file
   const fetchXSL = new XMLHttpRequest();
@@ -131,6 +134,9 @@ function loadXMLXSLToPage() {
     console.error("XML or XSL failed to load.");
     return;
   }
+
+  //https://www.w3schools.com/xml/xsl_client.asp
+  //Documentation for XSLTProcessor - apply XSL style to XML for HTML display
 
   //processes xsl rules and styles xml
   const processor = new XSLTProcessor();

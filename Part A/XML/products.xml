@@ -21,7 +21,7 @@
     </product>
     <product code="001-04">
         <name>Fizzy-Pop Extreme</name>
-        <description>Doubly Caffinated flavour, 500ml bottle</description>
+        <description>Doubly Caffinated, 500ml bottle</description>
         <quantity>200</quantity>
         <unit_price>4.00</unit_price>
     </product>
@@ -57,7 +57,7 @@
     </product>
     <product code="011-05">
         <name>Fizzy-Pop Aqua</name>
-        <description>Flavourless Sparkling Water, 500ml bottle</description>
+        <description>Sparkling Water, 500ml bottle</description>
         <quantity>100</quantity>
         <unit_price>3.00</unit_price>
     </product>
