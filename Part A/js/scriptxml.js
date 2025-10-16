@@ -21,6 +21,7 @@ function searchProduct() {
   //determine product is defined
   if (data.has(code)) {
     searchOutput.innerHTML = printProduct(code);
+    searchMessage.innerHTML = ""; //reset error message on successful query
   } else if (code === "") {
     let error = `<p class="text-center text-danger">Search requires Code. (eg: 101-01)</p>`;
     searchMessage.innerHTML = error;
