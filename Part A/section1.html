@@ -22,30 +22,52 @@
           <h1>Section 1 - XML</h1>
           <h2>Lorenzo Moares Nunez - 23378441</h2>
         </div>
+      </div>
       <div class="row pt-5">
-        <div class="col-5 products_col align-self-start">
-          <h2 class="py-5 text-center">All Product Information</h2>
-          <div id="output"></div>
-        </div>
-        <div class="col-2"></div>
         <div
           id="search"
           class="col-5 align-self-start pb-5 text-center products_search"
         >
-          <form>
+          <form onsubmit="searchProduct(); return false;">
             <label for="searchInput" class="form-label"
-              ><h2 class="py-5">Search by Code</h2></label
+              ><h2 class="pt-5">Search by Code</h2></label
             >
             <input type="text" id="searchInput" class="form-control" />
-            <button type="button" onclick="searchProduct()" id="searchBtn" class="btn btn-primary mt-3">
+            <button
+              type="button"
+              onclick="searchProduct()"
+              id="searchBtn"
+              class="btn btn-primary mt-3"
+            >
               Search
             </button>
-            <button type="button" onclick="resetProducts()" id="resetBtn" class="btn btn-primary mt-3">
+            <button
+              type="button"
+              onclick="resetProducts()"
+              id="resetBtn"
+              class="btn btn-primary mt-3"
+            >
               Reset
+            </button>
+            <button
+              type="button"
+              onclick="compareProducts()"
+              id="compareBtn"
+              class="btn btn-primary mt-3"
+            >
+              Compare
             </button>
           </form>
           <h6 class="mt-3">Code: ###-## (eg: 011-01)</h6>
+          <div id="searchMessage"></div>
           <div id="searchOutput" class="mt-4"></div>
+          <div id="compareHeader" class="mt-4"></div>
+          <div id="compareOutput" class="mt-2"></div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5 products_col align-self-start">
+          <h2 class="py-5 text-center">All Product Information</h2>
+          <div id="outputXML"></div>
         </div>
       </div>
     </div>
