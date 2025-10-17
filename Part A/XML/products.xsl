@@ -8,7 +8,7 @@
                 <div class="d-flex justify-content-center mb-5">
                     <div class="card index_card w-100">
                         <div class="card-body d-flex flex-column justify-content-center">
-                            <span class="card-title text-center"><xsl:value-of select="name" /><br />
+                            <span class="card-title text-center"><h5><xsl:value-of select="name" /></h5>
                             CODE: <b><xsl:value-of select="@code" /></b></span>
                             <ul>
                                 <li><b>Description: </b> <xsl:value-of select="description" /></li>

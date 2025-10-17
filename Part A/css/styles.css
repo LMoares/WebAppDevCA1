@@ -48,8 +48,7 @@ body {
   border: 5px solid #b9dcff;
 }
 
-body {
-  background-image: url("../img/bg-img.png");
-  background-attachment: fixed;
-  background-position: center;
+.card-body {
+  border: 2px solid black;
+  border-radius: 5px;
 }

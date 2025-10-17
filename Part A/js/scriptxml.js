@@ -50,7 +50,7 @@ function compareProducts() {
 
     document.getElementById(
       "compareHeader"
-    ).innerHTML = `<hr/><h5>Compared Products</h5>`; //create compared product header
+    ).innerHTML = `<hr/><h3>Compared Products</h3>`; //create compared product header
 
     compareOutput.innerHTML += printProduct(code) + `<br/>`; //add product card to compare list
 
@@ -73,8 +73,8 @@ function printProduct(code) {
           <div class="card index_card w-100">
             <div class="card-body d-flex flex-column justify-content-center">
               <span class="card-title text-center">
-                ${data.get(code)[0]}<br />
-                <b>${code}</b>
+                <h5>${data.get(code)[0]}</h5>
+                CODE: <b>${code}</b>
               </span>
               <ul class="text-start">
                 <li><b>Description:</b> ${data.get(code)[1]}</li>
