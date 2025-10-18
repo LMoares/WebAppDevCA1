@@ -24,6 +24,7 @@ function searchProduct() {
     searchOutput.innerHTML = printProduct(productCode);
     searchMessage.innerHTML = ""; //reset error message on successful query
     document.getElementById("compareBtn").className = "btn btn-primary mt-3"; //reveals compare button for user
+    document.getElementById("searchInput").value = ""; //reset search bar text
   } else if (productCode === "") {
     let error = `<p class="text-center text-light bg-danger d-inline-block px-2">Search requires Code. (eg: 101-01)</p>`;
     searchMessage.innerHTML = error;

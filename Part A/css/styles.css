@@ -34,18 +34,11 @@ body {
   transform: scale(1.03);
 }
 
-.index_body {
+.page_body {
   background-color: #c2d3de;
   border-radius: 5px;
   border: 5px solid #b9dcff;
   padding: 2rem;
-}
-
-.products_col,
-.products_search {
-  background-color: #c2d3de;
-  border-radius: 5px;
-  border: 5px solid #b9dcff;
 }
 
 .card-body {
