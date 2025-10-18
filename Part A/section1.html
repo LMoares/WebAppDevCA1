@@ -40,32 +40,36 @@
               ><h2>Search by Code</h2>
               <h6 class="mt-3">(Code e.g. 011-05)</h6></label
             >
-            <input
-              type="text"
-              id="searchInput"
-              class="form-control fs-4"
-              maxlength="6"
-              placeholder="###-##"
-            />
-            <button
-              type="button"
-              onclick="searchProduct()"
-              id="searchBtn"
-              class="btn btn-primary my-2"
+            <div
+              class="d-flex flex-wrap justify-content-center align-items-center"
             >
-              Search
-            </button>
-            <button
-              type="button"
-              onclick="resetProducts()"
-              id="resetBtn"
-              class="btn btn-primary my-2"
-            >
-              Reset
-            </button>
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control fs-4 mx-2 my-2"
+                maxlength="6"
+                placeholder="###-##"
+                style="max-width: 180px"
+              />
+              <button
+                type="button"
+                onclick="searchProduct()"
+                id="searchBtn"
+                class="btn btn-primary mx-2 my-2"
+              >
+                Search
+              </button>
+              <button
+                type="button"
+                onclick="resetProducts()"
+                id="resetBtn"
+                class="btn btn-secondary mx-2"
+              >
+                Reset
+              </button>
+            </div>
           </form>
-
-          <div id="searchMessage"></div>
+          <div id="searchMessage" class="mt-2"></div>
           <div id="searchOutput" class="mt-4"></div>
           <button
             type="button"

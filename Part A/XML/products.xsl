@@ -13,7 +13,7 @@
                             <ul>
                                 <li><b>Description: </b> <xsl:value-of select="description" /></li>
                                 <li><b>Quantity: </b> <xsl:value-of select="quantity" /></li>
-                                <li><b>Unit Price: </b> $<xsl:value-of select="unit_price" /></li>
+                                <li><b>Unit Price: </b> €<xsl:value-of select="unit_price" /></li>
                             </ul>
                         </div>
                     </div>

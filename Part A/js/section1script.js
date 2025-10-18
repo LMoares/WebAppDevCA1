@@ -86,7 +86,7 @@ function printProduct(code) {
               <ul class="text-start">
                 <li><b>Description:</b> ${data.get(code)[1]}</li>
                 <li><b>Quantity:</b> ${data.get(code)[2]}</li>
-                <li><b>Unit Price:</b> $${data.get(code)[3]}</li>
+                <li><b>Unit Price:</b> €${data.get(code)[3]}</li>
               </ul>
             </div>
           </div>
