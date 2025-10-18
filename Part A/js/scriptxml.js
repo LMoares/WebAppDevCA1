@@ -7,6 +7,7 @@ let data = new Map();
 //eg: "001-01", [name, description, quantity, price]
 
 let compareList = []; //array to hold product codes to ensure user only receives unique products in comparison view
+let productCode; //product code set by successful search query, used to add product to compared products list
 
 //output elements for html page
 let searchMessage = document.getElementById("searchMessage");
@@ -16,18 +17,19 @@ let compareOutput = document.getElementById("compareOutput");
 function searchProduct() {
   //input
   //take value from search bar and remove whitespace
-  let code = document.getElementById("searchInput").value.trim();
+  productCode = document.getElementById("searchInput").value.trim();
 
   //determine product is defined
-  if (data.has(code)) {
-    searchOutput.innerHTML = printProduct(code);
+  if (data.has(productCode)) {
+    searchOutput.innerHTML = printProduct(productCode);
     searchMessage.innerHTML = ""; //reset error message on successful query
-  } else if (code === "") {
-    let error = `<p class="text-center text-danger">Search requires Code. (eg: 101-01)</p>`;
+    document.getElementById("compareBtn").className = "btn btn-primary mt-3"; //reveals compare button for user
+  } else if (productCode === "") {
+    let error = `<p class="text-center text-light bg-danger d-inline-block px-2">Search requires Code. (eg: 101-01)</p>`;
     searchMessage.innerHTML = error;
   } else {
     //code not empty and code not found
-    let error = `<p class="text-center text-danger">No product found with Code: ${code}</p>`;
+    let error = `<p class="text-center text-light bg-danger d-inline-block px-2">No product found with Code: ${productCode}</p>`;
     searchMessage.innerHTML = error;
   }
 }
@@ -39,29 +41,33 @@ function resetProducts() {
   document.getElementById("searchInput").value = "";
   compareOutput.innerHTML = "";
   document.getElementById("compareHeader").innerHTML = "";
+  document.getElementById("compareBtn").className =
+    "btn btn-primary mt-3 d-none"; //hides compare button
   compareList = [];
 }
 
 function compareProducts() {
-  let code = document.getElementById("searchInput").value.trim(); //take value from search bar and remove whitespace
-  //determine if code is valid and product not already in list
-  if (!compareList.includes(code) && data.has(code)) {
-    compareList.push(code); //add current code to list of compared products - ensures unique products only in list
+  if (!compareList.includes(productCode)) {
+    //determine if product already exists in compare list
+    compareList.push(productCode); //add current code to list of compared products - ensures unique products only in list
 
     document.getElementById(
       "compareHeader"
     ).innerHTML = `<hr/><h3>Compared Products</h3>`; //create compared product header
 
-    compareOutput.innerHTML += printProduct(code) + `<br/>`; //add product card to compare list
+    compareOutput.innerHTML += printProduct(productCode) + `<br/>`; //add product card to compare list
 
-    searchMessage.innerHTML = ""; //clear error messages on successful query
-  } else if (!data.has(code)) {
+    document.getElementById("compareBtn").className =
+      "btn btn-primary mt-3 d-none"; //hides compare button
+    searchMessage.innerHTML = `<p class="text-center text-light bg-success d-inline-block px-2">Product Code: ${productCode} - added to Compare List</p>`; //informs user of product information moved to compare list
+    searchOutput.innerHTML = ""; //clear search output on product appearing in compare list
+  } else if (!data.has(productCode)) {
     //if code not valid error
-    let error = `<p class="text-center text-danger">Product: ${code} not found</p>`;
+    let error = `<p class="text-center text-danger">Product: ${productCode} not found</p>`;
     searchMessage.innerHTML = error;
   } else {
     //product already in list
-    let error = `<p class="text-center text-danger">Product: ${code} already in Compare List</p>`;
+    let error = `<p class="text-center text-danger">Product: ${productCode} already in Compare List</p>`;
     searchMessage.innerHTML = error;
   }
 }
