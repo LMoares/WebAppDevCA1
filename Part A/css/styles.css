@@ -20,8 +20,6 @@ body {
   background-color: #c9d6df;
   background-image: url("../img/bg-img.png");
   background-attachment: fixed;
-  background-position: center;
-
   overflow: auto;
 }
 
@@ -44,4 +42,8 @@ body {
 .card-body {
   border: 2px solid black;
   border-radius: 5px;
+}
+
+#searchInput {
+  max-width: 7rem;
 }

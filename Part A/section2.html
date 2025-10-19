@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="script.js" defer></script>
+    <script src="section2script.js" defer></script>
     <meta name="author" content="Lorenzo Moares Nunez" />
     <meta name="description" content="Web Application Development CA 1" />
     <!--Google fonts-->
@@ -30,10 +30,42 @@
           >
         </div>
       </div>
-      <div class="row">
+      <div class="row pt-5">
         <div class="col-md-3"></div>
-        <div class="col-md-6 d-flex justify-content-center page_body">
-          <h1>Search by City</h1>
+        <div class="col-md-6 text-center page_body">
+          <form onsubmit="return false;">
+            <label for="searchInput" class="form-label"
+              ><h2>Search by City</h2>
+            </label>
+            <div
+              class="d-flex flex-wrap justify-content-center align-items-center"
+            >
+              <input
+                type="text"
+                id="searchInput"
+                class="form-control fs-4 mx-2 my-2"
+                maxlength="35"
+                placeholder="Dublin"
+                style="max-width: 180px"
+              />
+              <button
+                type="button"
+                onclick="searchProduct()"
+                id="searchBtn"
+                class="btn btn-primary mx-2 my-2"
+              >
+                Search
+              </button>
+              <button
+                type="button"
+                onclick="resetProducts()"
+                id="resetBtn"
+                class="btn btn-secondary mx-2"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
         </div>
         <div class="col-md-3"></div>
       </div>
