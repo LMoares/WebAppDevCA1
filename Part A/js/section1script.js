@@ -4,7 +4,7 @@ let xsl;
 let data = new Map();
 //data will store products from xml
 //key: product code, value: array of product child elements
-//e.g. "001-01", [name, description, quantity, price]
+//e.g. "001-01", [name, category, description, quantity, price]
 
 let compareList = []; //array to hold product codes to ensure user only receives unique products in comparison view
 let productCode; //product code set by successful search query, used to add product to compared products list
@@ -85,9 +85,10 @@ function printProduct(code) {
                 CODE: <b>${code}</b>
               </span>
               <ul class="text-start">
-                <li><b>Description:</b> ${data.get(code)[1]}</li>
-                <li><b>Quantity:</b> ${data.get(code)[2]}</li>
-                <li><b>Unit Price:</b> €${data.get(code)[3]}</li>
+                <li><b>Category:</b> ${data.get(code)[1]}</li>
+                <li><b>Description:</b> ${data.get(code)[2]}</li>
+                <li><b>Quantity:</b> ${data.get(code)[3]}</li>
+                <li><b>Unit Price:</b> €${data.get(code)[4]}</li>
               </ul>
             </div>
           </div>
@@ -104,6 +105,7 @@ function buildDataMap() {
     //add elements to data dictionary - key: product code, value: array of product elements
     data.set(product.getAttribute("code"), [
       product.getElementsByTagName("name")[0].textContent,
+      product.getElementsByTagName("category")[0].textContent,
       product.getElementsByTagName("description")[0].textContent,
       product.getElementsByTagName("quantity")[0].textContent,
       product.getElementsByTagName("unit_price")[0].textContent,

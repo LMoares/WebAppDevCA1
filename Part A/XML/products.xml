@@ -1,79 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="products.xsl"?>
-<category type="Soft_Drinks">
+<products type="Soft_Drinks">
     <product code="001-01">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Classic</name>
         <description>Original flavour, 500ml bottle</description>
         <quantity>150</quantity>
         <unit_price>3.50</unit_price>
     </product>
     <product code="001-02">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Cherry</name>
         <description>Cherry flavour, 350ml can</description>
         <quantity>125</quantity>
         <unit_price>2.25</unit_price>
     </product>
     <product code="001-03">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Vanilla</name>
         <description>Vanilla flavour, 350ml can</description>
         <quantity>75</quantity>
         <unit_price>2.50</unit_price>
     </product>
     <product code="001-04">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Extreme</name>
         <description>Doubly Caffinated, 500ml bottle</description>
         <quantity>200</quantity>
         <unit_price>4.00</unit_price>
     </product>
     <product code="001-05">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Spooky Pumpkin</name>
         <description>Seasonal Spiced-Pumpkin flavour, 500ml bottle</description>
         <quantity>100</quantity>
         <unit_price>3.50</unit_price>
     </product>
     <product code="011-01">
+        <category>Sugar-Free Beverage</category>
         <name>Fizzy-Pop Diet</name>
         <description>Sugar-Free, 500ml bottle</description>
         <quantity>115</quantity>
         <unit_price>3.25</unit_price>
     </product>
     <product code="011-02">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Junior</name>
         <description>Caffine-Free, 350ml can</description>
         <quantity>75</quantity>
         <unit_price>2.25</unit_price>
     </product>
     <product code="011-03">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Citrus</name>
         <description>Citrus flavour, 350ml can</description>
         <quantity>50</quantity>
         <unit_price>2.25</unit_price>
     </product>
     <product code="011-04">
+        <category>Sugar-Free Beverage</category>
         <name>Fizzy-Pop Light</name>
         <description>Sugar-Free Original Flavour, 1l bottle</description>
         <quantity>150</quantity>
         <unit_price>5.50</unit_price>
     </product>
     <product code="011-05">
+        <category>Sugar-Free Beverage</category>
         <name>Fizzy-Pop Aqua</name>
         <description>Sparkling Water, 500ml bottle</description>
         <quantity>100</quantity>
         <unit_price>3.00</unit_price>
     </product>
     <product code="101-01">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Orange</name>
         <description>Orange Flavour, 350ml can</description>
         <quantity>150</quantity>
         <unit_price>2.25</unit_price>
     </product>
     <product code="101-02">
+        <category>Full-Sugar Beverage</category>
         <name>Fizzy-Pop Grape</name>
         <description>Grape Flavour, 1l bottle</description>
         <quantity>115</quantity>
         <unit_price>6.00</unit_price>
     </product>
-</category>
+</products>
 
 <!--
 Category		String 

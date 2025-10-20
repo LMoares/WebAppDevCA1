@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html"/>
-    <xsl:template match="/category">
+    <xsl:template match="/products">
         <div class="container">
             
             <xsl:for-each select="product">
@@ -11,6 +11,7 @@
                             <span class="card-title text-center"><h5><xsl:value-of select="name" /></h5>
                             CODE: <b><xsl:value-of select="@code" /></b></span>
                             <ul>
+                                <li><b>Category: </b><xsl:value-of select="category" /></li>
                                 <li><b>Description: </b> <xsl:value-of select="description" /></li>
                                 <li><b>Quantity: </b> <xsl:value-of select="quantity" /></li>
                                 <li><b>Unit Price: </b> €<xsl:value-of select="unit_price" /></li>
