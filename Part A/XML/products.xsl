@@ -3,8 +3,7 @@
     <xsl:output method="html"/>
     <xsl:template match="/products">
         <div class="container">
-            
-            <xsl:for-each select="product">
+                <xsl:for-each select="product">
                 <div class="d-flex justify-content-center mb-5">
                     <div class="card index_card w-100">
                         <div class="card-body d-flex flex-column justify-content-center">

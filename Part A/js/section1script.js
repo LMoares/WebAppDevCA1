@@ -147,7 +147,7 @@ function loadXMLXSLToPage() {
   }
 
   //https://www.w3schools.com/xml/xsl_client.asp
-  //Documentation for XSLTProcessor - apply XSL style to XML for HTML display
+  //Documentation for XSLTProcessor - apply XSL style to XML for browser display
 
   //processes xsl rules and styles xml
   const processor = new XSLTProcessor();
