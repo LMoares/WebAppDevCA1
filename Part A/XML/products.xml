@@ -86,12 +86,3 @@
         <unit_price>6.00</unit_price>
     </product>
 </products>
-
-<!--
-Category		String 
-Code		Codes must be unique IDs of the form ###-## where # is a digit 
-Name		String 
-Description	String 
-Quantity		Integer greater or equal to 0 
-Unit Price		Decimal greater or equal to 0 
--->

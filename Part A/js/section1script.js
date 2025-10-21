@@ -113,32 +113,30 @@ function buildDataMap() {
   }
 }
 
-function getXMLXSLData() {
+async function getXMLXSLData() {
   //relative xml/xsl file path
   const xmlPath = "XML/products.xml";
   const xslPath = "XML/products.xsl";
 
-  //https://www.w3schools.com/xml/xml_http.asp
-  //documentation for XMLHttpRequest - reading XML & XSL with Javascript
+  //fetch file data
+  var response = await fetch(xmlPath);
+  //wait for response from server with data content
+  var textContent = await response.text();
+  //parse xml data into xml document
+  var xmlData = new window.DOMParser().parseFromString(textContent, "text/xml");
 
-  const fetchXML = new XMLHttpRequest();
-  fetchXML.open("GET", xmlPath, false); //build request for xml data
-  fetchXML.send(); //send above request from browser to server - waits for response
-  const xmlFile = fetchXML.responseXML; //captures response and saves it to local variable
+  //same as above - retrieve xsl file
+  response = await fetch(xslPath);
+  textContent = await response.text();
+  var xslData = new DOMParser().parseFromString(textContent, "application/xml");
 
-  //same as above but for xsl file
-  const fetchXSL = new XMLHttpRequest();
-  fetchXSL.open("GET", xslPath, false);
-  fetchXSL.send();
-  const xslFile = fetchXSL.responseXML;
-
-  //returns the xml and xsl data as strings
-  return [xmlFile, xslFile];
+  //returns the xml and xsl data as documents
+  return [xmlData, xslData];
 }
 
-function loadXMLXSLToPage() {
-  //retrieves xml and xsl data as strings
-  [xml, xsl] = getXMLXSLData();
+async function loadXMLXSLToPage() {
+  //retrieves xml and xsl data as documents
+  [xml, xsl] = await getXMLXSLData();
 
   //checks to ensure xml and xsl data has been loaded, posts error to console if not
   if (!xml || !xsl) {
