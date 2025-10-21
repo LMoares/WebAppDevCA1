@@ -35,6 +35,7 @@
           id="search"
           class="col-md-5 align-self-start pb-5 text-center page_body"
         >
+          <!--search box shares row with product list, align-self-start ensures search container height is not based on product list-->
           <form onsubmit="searchProduct(); return false;">
             <label for="searchInput" class="form-label"
               ><h2>Search by Code</h2>
@@ -43,6 +44,7 @@
             <div
               class="d-flex flex-wrap justify-content-center align-items-center"
             >
+              <!--d-flex & flex-wrap allow the buttons and input field to share the same inline position and move beneath eachother when viewport is narrow-->
               <input
                 type="text"
                 id="searchInput"
@@ -69,13 +71,16 @@
             </div>
           </form>
           <div id="searchMessage" class="mt-2"></div>
+          <!--search message will inform user on query errors and compare list additions-->
           <div id="searchOutput" class="mt-4"></div>
+          <!--search output provides location for queried card-->
           <button
             type="button"
             onclick="compareProducts()"
             id="compareBtn"
             class="btn btn-primary mt-3 d-none"
           >
+            <!--d-none hides the button element, script shows button on successful query, hides button on userclick-->
             Compare
           </button>
           <div id="compareHeader" class="mt-4 d-none">

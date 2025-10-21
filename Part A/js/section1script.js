@@ -82,7 +82,7 @@ function printProduct(code) {
             <div class="card-body d-flex flex-column justify-content-center">
               <span class="card-title text-center">
                 <h5>${data.get(code)[0]}</h5>
-                CODE: <b>${code}</b>
+                <b>CODE:</b> ${code}
               </span>
               <ul class="text-start">
                 <li><b>Category:</b> ${data.get(code)[1]}</li>
@@ -123,9 +123,9 @@ async function getXMLXSLData() {
   //wait for response from server with data content
   var textContent = await response.text();
   //parse xml data into xml document
-  var xmlData = new window.DOMParser().parseFromString(textContent, "text/xml");
+  var xmlData = new DOMParser().parseFromString(textContent, "text/xml");
 
-  //same as above - retrieve xsl file
+  //same as above - retrieves xsl data
   response = await fetch(xslPath);
   textContent = await response.text();
   var xslData = new DOMParser().parseFromString(textContent, "application/xml");

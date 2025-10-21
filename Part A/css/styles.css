@@ -1,26 +1,26 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-  font-family: "Oswald", serif !important;
-  font-weight: 600 !important;
-  font-style: normal !important;
-  color: #1e2022;
-}
-
 body {
+  /*Fonts provided from Google - https://fonts.google.com/specimen/Open+Sans*/
   font-family: "Open Sans", serif !important;
   font-weight: 400 !important;
   font-style: normal !important;
   font-variation-settings: "wdth" 100 !important;
   color: #1e2022;
   background-color: #c9d6df;
-  background-image: url("../img/bg-img.png");
+  background-image: url("../img/bg-img.png"); /*image sourced from - https://bg.siteorigin.com/*/
   background-attachment: fixed;
-  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*Fonts provided from Google - https://fonts.google.com/specimen/Oswald*/
+  font-family: "Oswald", serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #1e2022;
 }
 
 .index_card {
